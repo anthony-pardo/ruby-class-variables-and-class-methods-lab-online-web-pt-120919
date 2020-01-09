@@ -27,4 +27,18 @@ class Song
   def self.artists
     @@artists.uniq
   end
+  
+  def self.genre_count
+    hash = {}
+    @@genres.each do |genre|
+      if hash[genre]
+        hash[genre] += 1 
+      else 
+        hash[genre] 
+      end
+    end
+    hash
+  end
+  
+  
 end
